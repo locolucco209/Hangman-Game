@@ -14,7 +14,6 @@ function startUp() {
 
 function Letter() {
     var letter = document.getElementById("Letter").value;
-    document.getElementByID('letter').addEventListener('click', function() {});
     if (letter.length > 0) {
         for (var i = 0; i < randoWu.length; i++) {
             if (randoWu[i] === letter) {
@@ -27,7 +26,7 @@ function Letter() {
     }
 }
 
-document.getElementByID('Letter').addEventListener('click', function() {
+document.getElementById('blocs').addEventListener('click', function() {
     //Code you want to happen on user clicks
     Letter();
 });
