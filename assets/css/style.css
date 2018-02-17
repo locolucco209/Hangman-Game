@@ -1,0 +1,68 @@
+body {
+    background-color: #126b34;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    border-style: solid;
+    border-color: rgb(11, 255, 11);
+    border-width: 7px;
+}
+
+#title {
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-size: 50px;
+    font-stretch: expanded;
+}
+
+#rules {
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    margin: 15px;
+    font-style: italic;
+}
+
+#game-rules {
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    margin: 15px;
+    font-style: italic;
+}
+
+#Letter {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    text-align: center;
+}
+
+#blocs {
+    align-items: center;
+}
+
+#answer {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+#counter {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+}
