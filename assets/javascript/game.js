@@ -12,10 +12,12 @@
 
         s = answerArray.join(" ");
         document.getElementById("answer").innerHTML = s;
+        document.getElementByID('letter').addEventListener('click', function() {});
     }
 
     function Letter() {
         var letter = document.getElementById("Letter").value;
+        document.getElementByID('letter').addEventListener('click', function() {});
 
         if (letter.length > 0) {
             for (var i = 0; i < randoWu.length; i++) {
