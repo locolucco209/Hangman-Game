@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset-context/cssreset-context-min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman Game</title>
+
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<script>
+    var randomWords = ["address", "altcoin", "asicminer", "blockchain", "block", "blockheight", "blockreward", "distributed&centralledger", "fork", "halving", "hashrate", "mining", "multisig", "node", "p2p", "pow", "pos", "public&privatekey", "signature", "smartcontract"];
+    var randoWu = randomWords[Math.floor(Math.random() * randomWords.length)];
+
+    var s;
+    var count = 0;
+    var answerArray = [];
+
+    function startUp() {
+        for (var i = 0; i < randoWu.length; i++) {
+            answerArray[1] = "_";
+        }
+
+        s = answerArray.join(" ");
+        document.getElementById("answer").innerHTML = s;
+    }
+
+    function Letter() {
+        var letter = document.getElementById("letter").value;
+
+        if (letter.length > 0) {
+            for (var i = 0; i < randoWu.length; i++) {
+                if (randoWu[i] === letter) {
+                    answerArray[i] === letter;
+                }
+            }
+
+            count++;
+            document.getElementById("counter").innerHTML = "No of clicks: " + count;
+            document.getElementById("answer").innerHTML = answerArray.join(" ");
+        }
+    }
+</script>
+
+<style>
+    body {
+        background-color: #126b34;
+        color: rgb(243, 243, 243);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #title {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    #rules {
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+    }
+    
+    #blocs {
+        color: black;
+        align-items: center;
+    }
+    
+    #answer #counter #stat {
+        align-content: center;
+    }
+</style>
+
+<body onload="startUp() ">
+    <h1 id="title">Cryptocurrency Hangman</h1>
+    <p id="rules">
+        Try and guess the word by choosing a letter. <br> All words are key cryptocurrency terms.</p>
+
+    <input id="Letter" type="text">
+    <input id="blocs" type="button" value="letter" onClick="Letter()" />
+    <p id="answer"></p>
+    <p id="counter"></p>
+    <p id="stat"></p>
+
+
+</body>
+
+
+
+
+</html>
